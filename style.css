@@ -1,0 +1,80 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #f0f2f5;
+}
+.container {
+  width: 450px;
+  min-height: 700px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  border: 1px solid lightgrey;
+}
+.container h2{
+  font-weight: 600;
+  font-size: 1.31rem;
+  padding: 1rem 1.75rem;
+  border-bottom: 1px solid #d4dbe5;
+}
+
+.wrapper {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    gap: 10px;
+}
+
+.wrapper div {
+    background-color: #f0f2f5;
+    width: 400px;
+    text-align: left;
+    height: 50px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+#info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px;
+    background-color: transparent;
+}
+
+#info div{
+    width: 180px;
+    font-size: 14px;
+}
+
+::selection {
+	color: #000;
+	background-color: #c1daf3;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 400px;
+  }
+
+  .wrapper div{
+    width: 325px;
+  }
+  #info div {
+    width: 150px;
+  }
+}
