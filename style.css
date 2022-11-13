@@ -5,60 +5,206 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  background-color: #f0f2f5;
+  transition: all 0.2s ease-in-out;
 }
-body{
+
+
+nav {
+  height: 100px;
+  background-color: white;
+  border-bottom: 1.5px solid lightgrey;
   display: flex;
-  align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  background: #f0f2f5;
-}
-.container {
-  width: 450px;
-  min-height: 700px;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-  border: 1px solid lightgrey;
-}
-.container h2{
+  align-items: center;
+  font-size: 42px;
   font-weight: 600;
-  font-size: 1.31rem;
-  padding: 1rem 1.75rem;
-  border-bottom: 1px solid #d4dbe5;
+  margin-bottom: 20px;
 }
 
-.wrapper {
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
-    gap: 10px;
+#refresh {
+  margin-left: 5%;
+  background-color: white;
+  cursor: pointer;
+  font-size:  20px
 }
 
-.wrapper div {
-    background-color: #f0f2f5;
-    width: 400px;
-    text-align: left;
-    height: 50px;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 18px;
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.item {
+  width: 30vw;
+  height: 80vh;
+  background-color: white;
+  border-radius: 10px;
+  border: 1.5px solid lightgrey;
+}
+
+.item1 {
+  width: 55vw;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.item2 {
+  overflow-y: scroll;
+  overflow-wrap: break-word;
+}
+
+.item1 > div {
+  width: 80%;
+  height: 10%;
+  border: 1.5px solid lightgrey;
+  background-color: white;
+  text-align: left;
+  font-size: 24px;
+}
+
+.miniitem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 10px;
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1) 0ms;
+}
+
+.miniitem:hover {
+  background-color: #f0f2f5;
+  cursor: pointer;
+}
+
+.miniitem div {
+  background-color: white;
+}
+
+
+.time {
+  font-weight: 500;
+  font-size: 35px;
+}
+
+#hadith {
+  background-color: white;
+  padding: 10px;
+  font-size: 20px;
+}
+
+#hadith .transmetuesi, #hadith p, #hadith strong {
+  background-color: white;
 }
 
 #info {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 5px;
-    background-color: transparent;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+  gap: 5px;
+  margin-top: -5px;
+  padding: 5px;
+  border-radius: 12px;
 }
 
-#info div{
-    width: 180px;
-    font-size: 14px;
+#info div {
+  background-color: white;
+}
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.lds-spinner {
+  color: official;
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-spinner div {
+  transform-origin: 40px 40px;
+  animation: lds-spinner 1.2s linear infinite;
+}
+.lds-spinner div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 3px;
+  left: 37px;
+  width: 6px;
+  height: 18px;
+  border-radius: 20%;
+  background: grey;
+}
+.lds-spinner div:nth-child(1) {
+  transform: rotate(0deg);
+  animation-delay: -1.1s;
+}
+.lds-spinner div:nth-child(2) {
+  transform: rotate(30deg);
+  animation-delay: -1s;
+}
+.lds-spinner div:nth-child(3) {
+  transform: rotate(60deg);
+  animation-delay: -0.9s;
+}
+.lds-spinner div:nth-child(4) {
+  transform: rotate(90deg);
+  animation-delay: -0.8s;
+}
+.lds-spinner div:nth-child(5) {
+  transform: rotate(120deg);
+  animation-delay: -0.7s;
+}
+.lds-spinner div:nth-child(6) {
+  transform: rotate(150deg);
+  animation-delay: -0.6s;
+}
+.lds-spinner div:nth-child(7) {
+  transform: rotate(180deg);
+  animation-delay: -0.5s;
+}
+.lds-spinner div:nth-child(8) {
+  transform: rotate(210deg);
+  animation-delay: -0.4s;
+}
+.lds-spinner div:nth-child(9) {
+  transform: rotate(240deg);
+  animation-delay: -0.3s;
+}
+.lds-spinner div:nth-child(10) {
+  transform: rotate(270deg);
+  animation-delay: -0.2s;
+}
+.lds-spinner div:nth-child(11) {
+  transform: rotate(300deg);
+  animation-delay: -0.1s;
+}
+.lds-spinner div:nth-child(12) {
+  transform: rotate(330deg);
+  animation-delay: 0s;
+}
+@keyframes lds-spinner {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.hidden {
+  display: none;
 }
 
 ::selection {
@@ -66,15 +212,81 @@ body{
 	background-color: #c1daf3;
 }
 
-@media only screen and (max-width: 600px) {
-  .container {
-    width: 400px;
+@media only screen and (max-width: 900px) {
+
+  main {
+    display: flex;
+    justify-content: center;
+  }
+  .container{
+    flex-direction: column;
+    margin-bottom: 25px;
   }
 
-  .wrapper div{
-    width: 325px;
+  .item1 {
+    width: 80vw;
+    height: 130vh;
+    min-height: fit-content;
   }
-  #info div {
-    width: 150px;
+  .item2 {
+    width: 80vw;
   }
+
+  .time {
+    font-size: 25px;
+  }
+
+  .name {
+    font-size: 15px;
+  }
+
+  #hadith {
+    font-size: 15px;
+  }
+
+  #info {
+    flex-direction: column;
+  }
+  .infoMini {
+    font-size: 10px;
+  }
+
+  nav {
+    font-size: 30px;
+    height: 10%;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  .time {
+    font-size: 72px;
+  }
+
+  .name {
+    font-size: 45px;
+  }
+
+  #hadith {
+    font-size: 40px;
+  }
+
+  .infoMini {
+    font-size: 34px;
+  }
+
+  nav {
+    font-size: 80px;
+    height: 20%;
+  }
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: black;
+  font-weight: 500;
 }

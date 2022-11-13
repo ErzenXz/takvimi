@@ -4,36 +4,69 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apps • Takvimi</title>
+    <title>Takvimi</title>
     <!-- <script defer src="app.js"></script> -->
     <script defer src="second.js"></script>
+    <script src="https://kit.fontawesome.com/f45cd9c28c.js" crossorigin="anonymous" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main>
-        <div class="container">
 
-            <h2>Takvimi</h2>
-            <div class="wrapper">
-                <div id="imsaku">Loading...</div>
-                <div id="sabahu">Loading...</div>
-                <div id="lindjaDiellit">Loading...</div>
-                <div id="dreka">Loading...</div>
-                <div id="ikindia">Loading...</div>
-                <div id="akshami">Loading...</div>
-                <div id="jacia">Loading...</div>
+    <nav>Takvimi në Kosovë <i class="fa-solid fa-arrows-rotate" id="refresh" onclick="refreshData()"></i></nav>
+    <div class="loading" id="loading">
+        <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    </div>
+
+    <main class="hidden" id="main">
+
+        <div class="container">
+            <div class="item item1">
+
+                <div class="miniitem">
+                    <div id="imsakuN" class="name">Loading...</div>
+                    <div id="imsakuT" class="time">00:00</div>
+                </div>
+                <div class="miniitem">
+                    <div id="sabahuN" class="name">Loading...</div>
+                    <div id="sabahuT" class="time">00:00</div>
+                </div>
+                <div class="miniitem">
+                    <div id="lindjaDiellitN" class="name">Loading...</div>
+                    <div id="lindjaDiellitT" class="time">00:00</div>
+                </div>
+                <div class="miniitem">
+                    <div id="drekaN" class="name">Loading...</div>
+                    <div id="drekaT" class="time">00:00</div>
+                </div>
+                <div class="miniitem">
+                    <div id="ikindiaN" class="name">Loading...</div>
+                    <div id="ikindiaT" class="time">00:00</div>
+                </div>
+                <div class="miniitem">
+                    <div id="akshamiN" class="name">Loading...</div>
+                    <div id="akshamiT" class="time">00:00</div>
+                </div>
+                <div class="miniitem">
+                    <div id="jaciaN" class="name">Loading...</div>
+                    <div id="jaciaT" class="time">00:00</div>
+                </div>
                 <div id="info">
-                    <div id="georgian">Loading...</div>
-                    <div id="hijri">Loading...</div>
-                    <div id="weekday">Loading...</div>
-                    <div id="holiday">Loading...</div>
-                    <div id="month">Loading...</div>
-                    <div id="midnight">Loading...</div>
+                    <div id="georgian" class="infoMini">Loading...</div>
+                    <div id="hijri" class="infoMini">Loading...</div>
+                    <div id="weekday" class="infoMini">Loading...</div>
+                    <div id="holiday" class="infoMini">Loading...</div>
+                    <div id="month" class="infoMini">Loading...</div>
+                    <div id="midnight" class="infoMini">Loading...</div>
                 </div>
             </div>
-
+            <div class="item item2">
+                <div id="hadith"></div>
+            </div>
         </div>
     </main>
+    <footer>
+        <pre>ErzenK       All rights reserved         2022©</pre>
+        </footer>
 </body>
 </html>
