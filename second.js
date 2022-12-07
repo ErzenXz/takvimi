@@ -46,7 +46,7 @@ function getPrayerTimes(){
         method: 3
       });
 
-      var hadithUrl = PROXY + "https://onehadith.org";
+      var hadithUrl = "https://onehadith.org";
       var hadithfUrl = hadithUrl + "/api/random";
       var hadith_url = geturl(hadithfUrl, { lan: "al"});
       fetch(hadith_url).then((response) => response.json()).then((data) => {
